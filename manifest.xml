@@ -504,8 +504,5 @@
         </interface>
         <fqname>@2.15::IPictureQuality/default</fqname>
     </hal>
-    <sepolicy>
-        <version>31.0</version>
-    </sepolicy>
     <kernel target-level="5"/>
 </manifest>
