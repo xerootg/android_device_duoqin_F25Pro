@@ -37,6 +37,7 @@ build needs it back:
 
 ```
 git -C vendor/lineage apply device/duoqin/F25Pro/patches/vendor-lineage-restore-kernel-headers-cmd.patch
+git -C vendor/interfaces apply device/duoqin/F25Pro/patches/vendor-interfaces-mtkpower-callback-src.patch
 ```
 
 Also symlink the stock kernel toolchain (see BoardConfig.mk comments):

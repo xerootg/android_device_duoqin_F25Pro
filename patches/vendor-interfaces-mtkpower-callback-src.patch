@@ -1,0 +1,12 @@
+diff --git a/vendor/mediatek/hardware/mtkpower/1.1/Android.bp b/vendor/mediatek/hardware/mtkpower/1.1/Android.bp
+index 7ffc9ab..233469f 100644
+--- a/vendor/mediatek/hardware/mtkpower/1.1/Android.bp
++++ b/vendor/mediatek/hardware/mtkpower/1.1/Android.bp
+@@ -6,6 +6,7 @@ hidl_interface {
+     srcs: [
+         "IMtkPerf.hal",
+         "IMtkPower.hal",
++        "IMtkPowerCallback.hal",
+     ],
+     interfaces: [
+         "android.hidl.base@1.0",
