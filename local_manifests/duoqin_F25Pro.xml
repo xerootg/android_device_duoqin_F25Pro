@@ -3,14 +3,14 @@
     Local manifest for building DumberOS/LineageOS for the Qin F25 Pro.
 
     Usage:
-      repo init -u https://github.com/miki151/dumberos_manifests.git --git-lfs
+      repo init -u https://github.com/miki151/dumberos_manifests.git (with git-lfs)
       mkdir -p .repo/local_manifests
       cp device/duoqin/F25Pro/local_manifests/duoqin_F25Pro.xml .repo/local_manifests/
       repo sync -c
 
-    remove-project names must match the <project name=...> attributes in
-    dumberos_manifests/default.xml - re-verify after any upstream manifest
-    change.
+    remove-project names must match the project name attributes in
+    dumberos_manifests/default.xml; re-verify after any upstream manifest
+    change. (No double hyphens in this comment: illegal in XML.)
 -->
 <manifest>
   <remote name="xerootg" fetch="https://github.com/xerootg/" />
