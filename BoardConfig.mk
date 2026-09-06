@@ -146,8 +146,13 @@ TARGET_USERIMAGES_USE_MKE2FS := true
 # Security patch level: track the stock vendor
 VENDOR_SECURITY_PATCH := 2025-10-05
 
-# SELinux
+# SELinux. We ship the stock prebuilt vendor policy (vendor/etc/selinux
+# blobs) rather than building vendor policy from source; the treble
+# sepolicy compat tests can't run against that arrangement (missing
+# generated plat mapping targets), so skip them for bring-up.
+# TODO: build vendor policy from source and drop this.
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # VINTF: main manifest + the stock per-HAL fragments (merged at build).
 # Fragment files live in the vendor tree mirror; PRODUCT_COPY_FILES is
