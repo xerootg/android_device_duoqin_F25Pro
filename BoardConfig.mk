@@ -62,6 +62,15 @@ TARGET_KERNEL_CLANG_COMPILE := true
 # cross-compile environment back on.
 TARGET_KERNEL_NO_GCC := false
 
+# Build the kernel with the exact clang it shipped with (clang 12,
+# r416183b - same CONFIG_CC_VERSION_TEXT as stock, ABI-verified).
+# Newer clang (r487747c/17) breaks the 5.10 stack-protector probes
+# (undefined __stack_chk_guard at vmlinux link). NOTE: r416183b is not
+# in the LineageOS prebuilts manifest - symlink it into the workspace:
+#   ln -s <kernel-workspace>/prebuilts-master/clang/host/linux-x86/clang-r416183b \
+#     prebuilts/clang/host/linux-x86/clang-r416183b
+TARGET_KERNEL_CLANG_VERSION := r416183b
+
 # DTB: prebuilt from stock vendor_boot (GKI common has no MTK dts).
 # With header v4 the build places the dtb into vendor_boot, matching
 # the stock layout - the flag must still be true for the build system.
