@@ -28,3 +28,20 @@ device-verified TWRP tree. Hardware inventory and evidence:
 `proprietary-refs/` holds unmodified stock reference files (fstab,
 VINTF, vendor build.prop) used to derive the curated versions in this
 tree — kept for provenance, not consumed by the build.
+
+## Required workspace patches
+
+DumberOS's `vendor/lineage` fork strips the kernel headers_install command
+from `generated_kernel_includes` (GSIs never build kernels). A per-device
+build needs it back:
+
+```
+git -C vendor/lineage apply device/duoqin/F25Pro/patches/vendor-lineage-restore-kernel-headers-cmd.patch
+```
+
+Also symlink the stock kernel toolchain (see BoardConfig.mk comments):
+
+```
+ln -s <linux-duoqin-f25pro>/prebuilts-master/clang/host/linux-x86/clang-r416183b \
+  prebuilts/clang/host/linux-x86/clang-r416183b
+```
