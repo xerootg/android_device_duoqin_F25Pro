@@ -20,7 +20,13 @@ Device configuration for the DuoQin Qin F25 Pro keypad phone
 
 ## Status
 
-Pre-first-build scaffold. Boot-image geometry, partition layout, A/B
+**First full build succeeds.** `lineage_F25Pro-ap2a-userdebug` produces a
+complete image set (boot/dtbo/vendor_boot/system/system_ext/product/vendor
+/vbmeta*), with `boot.img` carrying our from-scratch GKI kernel
+(`5.10.209`, clang r416183b, built from `kernel/duoqin/F25Pro`) and
+check_vintf passing. Not yet flashed/booted on device (Stage 4).
+
+### Earlier Boot-image geometry, partition layout, A/B
 slot-B hazard handling, and first-stage module set are ported from the
 device-verified TWRP tree. Hardware inventory and evidence:
 [HARDWARE.md in the kernel repo](https://github.com/xerootg/linux-duoqin-f25pro/blob/main/HARDWARE.md).
