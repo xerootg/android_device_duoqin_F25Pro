@@ -149,8 +149,11 @@ VENDOR_SECURITY_PATCH := 2025-10-05
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# VINTF
+# VINTF: main manifest + the stock per-HAL fragments (merged at build).
+# Fragment files live in the vendor tree mirror; PRODUCT_COPY_FILES is
+# not allowed to carry VINTF metadata.
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(wildcard vendor/duoqin/F25Pro/proprietary/vendor/etc/vintf/manifest/*.xml)
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Vendor blobs
