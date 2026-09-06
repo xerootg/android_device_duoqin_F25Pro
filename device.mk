@@ -56,11 +56,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# MTK preloader block device helper (from TWRP port)
-PRODUCT_PACKAGES += \
-    create_pl_dev \
-    create_pl_dev.recovery
-
 # First-stage fstab in vendor ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6768:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6768 \
