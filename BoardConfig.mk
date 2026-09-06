@@ -57,9 +57,10 @@ BOARD_KERNEL_IMAGE_NAME := Image.lz4
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # DTB: prebuilt from stock vendor_boot (GKI common has no MTK dts).
-# Goes into vendor_boot, matching the stock layout.
+# With header v4 the build places the dtb into vendor_boot, matching
+# the stock layout - the flag must still be true for the build system.
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
-BOARD_INCLUDE_DTB_IN_BOOTIMG :=
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 # DTBO: stock image, reflashed as-is (panel/touch selection lives here)
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
