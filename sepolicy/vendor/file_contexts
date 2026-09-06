@@ -1,0 +1,5 @@
+# Device-specific file contexts for the Qin F25 Pro.
+# Stock vendor sepolicy is shipped prebuilt via the vendor tree
+# (vendor/etc/selinux) for the boot milestone; entries here extend it
+# only where our built components differ from stock. Expect this to
+# grow during bring-up from audit2allow harvesting.

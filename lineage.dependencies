@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "android_kernel_duoqin_F25Pro",
+    "remote": "github",
+    "organization": "xerootg",
+    "target_path": "kernel/duoqin/F25Pro"
+  },
+  {
+    "repository": "android_vendor_duoqin_F25Pro",
+    "remote": "github",
+    "organization": "xerootg",
+    "target_path": "vendor/duoqin/F25Pro"
+  }
+]

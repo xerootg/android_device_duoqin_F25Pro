@@ -1,0 +1,14 @@
+#
+# System props for the DuoQin Qin F25 Pro
+#
+
+# Display: 3.5" 640x960 panel; stock ships 320 but the small screen
+# reads better at 240 with LineageOS UI metrics
+ro.sf.lcd_density=240
+
+# Keypad phone: enable hardware key support
+qemu.hw.mainkeys=0
+
+# MTK RIL
+persist.vendor.radio.mtk_dsds_mode=0
+ro.telephony.default_network=9,9

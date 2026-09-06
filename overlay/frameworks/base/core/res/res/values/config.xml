@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2026 The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Physical QWERTY-less keypad phone: keyboard-driven navigation -->
+    <bool name="config_showNavigationBar">true</bool>
+
+    <!-- Hardware keys present (MENU|HOME|BACK|SEARCH|APP_SWITCH bitmask: 64+2+1+16) -->
+    <integer name="config_deviceHardwareKeys">83</integer>
+
+    <!-- No NFC populated on this unit -->
+    <bool name="config_nfc_supported">false</bool>
+
+    <!-- Battery capacity mAh -->
+    <integer name="config_batteryCapacity">2500</integer>
+
+    <!-- Enable LTE -->
+    <bool name="config_lte_capable">true</bool>
+</resources>
