@@ -55,6 +55,12 @@ TARGET_KERNEL_SOURCE := kernel/duoqin/F25Pro
 TARGET_KERNEL_CONFIG := mssi_64_cn_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
 TARGET_KERNEL_CLANG_COMPILE := true
+# ACK android12-5.10 has no scripts/Makefile.clang - clang's --target
+# is derived from CROSS_COMPILE only. Lineage defaults 5.10+ to
+# NO_GCC=true (no CROSS_COMPILE passed), which makes clang compile for
+# the x86 host ("unknown register name 'x0'"). Force the GCC-prefixed
+# cross-compile environment back on.
+TARGET_KERNEL_NO_GCC := false
 
 # DTB: prebuilt from stock vendor_boot (GKI common has no MTK dts).
 # With header v4 the build places the dtb into vendor_boot, matching
