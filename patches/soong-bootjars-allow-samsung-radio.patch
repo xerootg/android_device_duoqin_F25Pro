@@ -1,0 +1,12 @@
+diff --git a/scripts/check_boot_jars/package_allowed_list.txt b/scripts/check_boot_jars/package_allowed_list.txt
+index 063e9f0..ac6d309 100644
+--- a/scripts/check_boot_jars/package_allowed_list.txt
++++ b/scripts/check_boot_jars/package_allowed_list.txt
+@@ -282,3 +282,7 @@ qcom.fmradio
+ ###################################################
+ # IFAA Manager used for Alipay and/or WeChat payment
+ org\.ifaa\.android\.manager.*
++
++# DumberOS frameworks/base statically links the Samsung radio HIDL java
++# interfaces (from vendor/interfaces); allow them on the bootclasspath.
++vendor\.samsung\.hardware\.radio.*
