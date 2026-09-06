@@ -47,3 +47,13 @@ Also symlink the stock kernel toolchain (see BoardConfig.mk comments):
 ln -s <linux-duoqin-f25pro>/prebuilts-master/clang/host/linux-x86/clang-r416183b \
   prebuilts/clang/host/linux-x86/clang-r416183b
 ```
+
+## Build flags
+
+DumberOS's frameworks/base adds keystore2 classes not present in the
+checked-in API signature files, so build with stub validation off
+(build-time API tracking only, no effect on the images):
+
+```
+DISABLE_STUB_VALIDATION=true m
+```
