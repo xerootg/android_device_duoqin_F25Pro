@@ -9,3 +9,5 @@ soong_namespace {
         "vendor/duoqin/F25Pro",
     ],
 }
+
+build = ["symlinks.bp"]

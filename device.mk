@@ -70,6 +70,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Stock /vendor lib symlinks (see symlinks.bp)
+PRODUCT_PACKAGES += \
+    gatekeeper.default.so_symlink64 \
+    gatekeeper.default.so_symlink \
+    vulkan.mt6768.so_symlink64 \
+    vulkan.mt6768.so_symlink \
+    libdpframework.so_symlink64 \
+    libdpframework.so_symlink \
+    libmtk_drvb.so_symlink64 \
+    libmtk_drvb.so_symlink \
+    libnir_neon_driver.so_symlink64 \
+    libnir_neon_driver.so_symlink \
+    libpq_prot.so_symlink64 \
+    libpq_prot.so_symlink
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 

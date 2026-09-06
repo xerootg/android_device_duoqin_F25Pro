@@ -1,0 +1,91 @@
+//
+// Functional /vendor symlinks from the stock partition, recreated at
+// build time. Source of truth: vendor/duoqin/F25Pro/symlinks.txt
+// (toybox/toolbox applet links excluded - those binaries are built).
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "gatekeeper.default.so_symlink64",
+    soc_specific: true,
+    installed_location: "lib64/hw/gatekeeper.default.so",
+    symlink_target: "libSoftGatekeeper.so",
+}
+
+install_symlink {
+    name: "gatekeeper.default.so_symlink",
+    soc_specific: true,
+    installed_location: "lib/hw/gatekeeper.default.so",
+    symlink_target: "libSoftGatekeeper.so",
+}
+
+install_symlink {
+    name: "vulkan.mt6768.so_symlink64",
+    soc_specific: true,
+    installed_location: "lib64/hw/vulkan.mt6768.so",
+    symlink_target: "/vendor/lib64/egl/libGLES_mali.so",
+}
+
+install_symlink {
+    name: "vulkan.mt6768.so_symlink",
+    soc_specific: true,
+    installed_location: "lib/hw/vulkan.mt6768.so",
+    symlink_target: "/vendor/lib/egl/libGLES_mali.so",
+}
+
+install_symlink {
+    name: "libdpframework.so_symlink64",
+    soc_specific: true,
+    installed_location: "lib64/libdpframework.so",
+    symlink_target: "mt6768/libdpframework.so",
+}
+
+install_symlink {
+    name: "libdpframework.so_symlink",
+    soc_specific: true,
+    installed_location: "lib/libdpframework.so",
+    symlink_target: "mt6768/libdpframework.so",
+}
+
+install_symlink {
+    name: "libmtk_drvb.so_symlink64",
+    soc_specific: true,
+    installed_location: "lib64/libmtk_drvb.so",
+    symlink_target: "mt6768/libmtk_drvb.so",
+}
+
+install_symlink {
+    name: "libmtk_drvb.so_symlink",
+    soc_specific: true,
+    installed_location: "lib/libmtk_drvb.so",
+    symlink_target: "mt6768/libmtk_drvb.so",
+}
+
+install_symlink {
+    name: "libnir_neon_driver.so_symlink64",
+    soc_specific: true,
+    installed_location: "lib64/libnir_neon_driver.so",
+    symlink_target: "mt6768/libnir_neon_driver.so",
+}
+
+install_symlink {
+    name: "libnir_neon_driver.so_symlink",
+    soc_specific: true,
+    installed_location: "lib/libnir_neon_driver.so",
+    symlink_target: "mt6768/libnir_neon_driver.so",
+}
+
+install_symlink {
+    name: "libpq_prot.so_symlink64",
+    soc_specific: true,
+    installed_location: "lib64/libpq_prot.so",
+    symlink_target: "mt6768/libpq_prot.so",
+}
+
+install_symlink {
+    name: "libpq_prot.so_symlink",
+    soc_specific: true,
+    installed_location: "lib/libpq_prot.so",
+    symlink_target: "mt6768/libpq_prot.so",
+}
