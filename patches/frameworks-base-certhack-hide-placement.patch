@@ -1,0 +1,117 @@
+diff --git a/keystore/java/android/security/keystore2/CertHack.java b/keystore/java/android/security/keystore2/CertHack.java
+index 5d575511d..ef9ed1b41 100644
+--- a/keystore/java/android/security/keystore2/CertHack.java
++++ b/keystore/java/android/security/keystore2/CertHack.java
+@@ -41,10 +41,10 @@ import java.util.Map;
+ import java.util.Objects;
+ import java.util.Set;
+ 
+-@SuppressWarnings("MissingNullability")
+ /**
+  * @hide
+  */
++@SuppressWarnings("MissingNullability")
+ public final class CertHack {
+     private CertHack() {}
+     private static final ASN1ObjectIdentifier OID = new ASN1ObjectIdentifier("1.3.6.1.4.1.11129.2.1.17");
+diff --git a/keystore/java/android/security/keystore2/UtilKt.java b/keystore/java/android/security/keystore2/UtilKt.java
+index 4c615fd9f..db1af0ed8 100644
+--- a/keystore/java/android/security/keystore2/UtilKt.java
++++ b/keystore/java/android/security/keystore2/UtilKt.java
+@@ -12,11 +12,11 @@ import java.util.concurrent.ThreadLocalRandom;
+ import android.annotation.FlaggedApi;
+ 
+ //@FlaggedApi("")
+-@SuppressWarnings("MissingNullability")
+ /**
+  * Blabla
+  * @hide
+  */
++@SuppressWarnings("MissingNullability")
+ public final class UtilKt {
+     private static final String TAG = "UtilKt";
+ 
+diff --git a/keystore/java/android/security/keystore2/Utils.java b/keystore/java/android/security/keystore2/Utils.java
+index 16f651ec2..c7b4c8d75 100644
+--- a/keystore/java/android/security/keystore2/Utils.java
++++ b/keystore/java/android/security/keystore2/Utils.java
+@@ -17,11 +17,11 @@ import java.util.Iterator;
+ import android.annotation.FlaggedApi;
+ 
+ //@FlaggedApi("")
+-@SuppressWarnings("MissingNullability")
+ /**
+  * Blabla
+  * @hide
+  */
++@SuppressWarnings("MissingNullability")
+ public class Utils {
+     private final static String TAG = "Utils";
+     /**
+diff --git a/keystore/java/android/security/keystore2/XMLParser.java b/keystore/java/android/security/keystore2/XMLParser.java
+index 10e792c82..1e98fbd45 100644
+--- a/keystore/java/android/security/keystore2/XMLParser.java
++++ b/keystore/java/android/security/keystore2/XMLParser.java
+@@ -11,10 +11,10 @@ import java.util.Map;
+ 
+ import android.annotation.FlaggedApi;
+ 
+-@SuppressWarnings("MissingNullability")
+ /**
+  * @hide
+  */
++@SuppressWarnings("MissingNullability")
+ public class XMLParser {
+ 
+     private final String xml;
+diff --git a/keystore/java/android/security/keystore2/XmlPullParser.java b/keystore/java/android/security/keystore2/XmlPullParser.java
+index 116466a60..5f36162a7 100644
+--- a/keystore/java/android/security/keystore2/XmlPullParser.java
++++ b/keystore/java/android/security/keystore2/XmlPullParser.java
+@@ -140,11 +140,11 @@ import java.io.Reader;
+ 
+ import android.annotation.FlaggedApi;
+ 
+-@SuppressWarnings("MissingNullability")
+ /**
+  * BLabl
+  * @hide
+  */
++@SuppressWarnings("MissingNullability")
+ public interface XmlPullParser {
+ 
+     /** This constant represents the default namespace (empty string "") */
+diff --git a/keystore/java/android/security/keystore2/XmlPullParserException.java b/keystore/java/android/security/keystore2/XmlPullParserException.java
+index e5d52fe36..da46e79b6 100644
+--- a/keystore/java/android/security/keystore2/XmlPullParserException.java
++++ b/keystore/java/android/security/keystore2/XmlPullParserException.java
+@@ -10,11 +10,11 @@ package android.security.keystore2;
+  */
+ import android.annotation.FlaggedApi;
+ 
+-@SuppressWarnings("MissingNullability")
+ /**
+  * BLabl
+  * @hide
+  */
++@SuppressWarnings("MissingNullability")
+ public class XmlPullParserException extends Exception {
+     protected Throwable detail;
+     protected int row = -1;
+diff --git a/keystore/java/android/security/keystore2/XmlPullParserFactory.java b/keystore/java/android/security/keystore2/XmlPullParserFactory.java
+index 46ef05870..469316ae3 100644
+--- a/keystore/java/android/security/keystore2/XmlPullParserFactory.java
++++ b/keystore/java/android/security/keystore2/XmlPullParserFactory.java
+@@ -18,11 +18,11 @@ import java.util.Map;
+ 
+ import android.annotation.FlaggedApi;
+ 
+-@SuppressWarnings("MissingNullability")
+ /**
+  * BLabl
+  * @hide
+  */
++@SuppressWarnings("MissingNullability")
+ public class XmlPullParserFactory {
+ 
+     /**
