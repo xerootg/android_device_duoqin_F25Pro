@@ -66,9 +66,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6768:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6768 \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6768:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6768
 
-# Soong namespaces
+# Soong namespaces. hardware/samsung: lineage-21 frameworks/base
+# unconditionally depends on the Samsung radio HAL java interfaces,
+# which live in that repo's own namespace (on Samsung devices their
+# device tree exposes it; DumberOS's GSI target did it in the phh tree).
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/samsung
 
 # Stock /vendor lib symlinks (see symlinks.bp)
 PRODUCT_PACKAGES += \
