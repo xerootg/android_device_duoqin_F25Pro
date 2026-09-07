@@ -20,6 +20,20 @@ Device configuration for the DuoQin Qin F25 Pro keypad phone
 
 ## Status
 
+**Our kernel boots the device.** A from-scratch GKI kernel
+(`5.10.209-android12-9`, gzip Image) flashed to `boot_a` boots to full UI
+with all 294 stock vendor modules loaded cleanly (GPU/WiFi/touch/display/…),
+zero module-load failures, root intact. Validates the build-kernel-from-source
++ reuse-stock-vendor-blobs (KMI) approach end-to-end on real hardware.
+
+Gotcha that cost several bootloops (now fixed in BoardConfig + kernel
+build.config): **this MTK LK bootloader decompresses gzip kernels only,
+not lz4** — an `Image.lz4` boot.img never decompresses and bootloops before
+the kernel runs. Also: `fastboot boot` (RAM boot) is a no-op on this LK;
+kernels must be flashed to test.
+
+## Status (build)
+
 **First full build succeeds.** `lineage_F25Pro-ap2a-userdebug` produces a
 complete image set (boot/dtbo/vendor_boot/system/system_ext/product/vendor
 /vbmeta*), with `boot.img` carrying our from-scratch GKI kernel
