@@ -53,7 +53,10 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/duoqin/F25Pro
 TARGET_KERNEL_CONFIG := mssi_64_cn_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image.lz4
+# This device's MTK LK bootloader decompresses gzip kernels only, NOT lz4
+# (stock boot.img ships a gzip Image; an Image.lz4 never decompresses and
+# bootloops before the kernel runs - confirmed on-device). Must be Image.gz.
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_CLANG_COMPILE := true
 # ACK android12-5.10 has no scripts/Makefile.clang - clang's --target
 # is derived from CROSS_COMPILE only. Lineage defaults 5.10+ to
